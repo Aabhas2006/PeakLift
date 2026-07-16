@@ -43,3 +43,31 @@
 
 * Design and implement the `Exercise` class.
 * Continue building the relationship between `Workout`, `Exercise`, and `Set`.
+
+## Day 4
+
+### ✅ What I Built
+
+* Implemented the `Workout` class.
+* Added support for storing multiple exercises using a list.
+* Implemented `add_exercise()` and `remove_exercise()` methods.
+* Designed and implemented the `Exercise` class.
+* Designed and implemented the `Set` class.
+
+### 🧠 What I Learned
+
+* A `Workout` contains multiple `Exercise` objects.
+* An `Exercise` contains multiple `Set` objects.
+* A `Set` stores only `weight` and `reps`.
+* Understood the difference between `remove()` and `pop()`.
+* Learned that designing classes before coding leads to cleaner architecture.
+
+### 💡 Challenges
+
+* Deciding what each class should own.
+* Understanding object relationships (Workout → Exercise → Set).
+
+### 🎯 Next Step
+
+* Connect all classes together.
+* Start implementing JSON storage for persistent workout data.
