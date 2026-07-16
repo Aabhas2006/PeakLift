@@ -1,0 +1,13 @@
+class Set:
+
+    def __init__(self , reps , weight):
+
+        self.reps = reps
+        self.weight = weight
+
+    def update_reps(self, reps):
+        self.reps = reps
+
+    def  update_weight(self, weight):
+
+        self.weight = weight
