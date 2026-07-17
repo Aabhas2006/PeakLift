@@ -11,3 +11,7 @@ class Set:
     def  update_weight(self, weight):
 
         self.weight = weight
+
+    def __str__(self):
+        
+        return f"{self.weight} kg × {self.reps} reps"

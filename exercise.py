@@ -11,3 +11,12 @@ class Exercise:
     def remove_set(self, set):
 
         self.sets.remove(set)
+
+    def __str__(self):
+
+        text = f"Exercise: {self.name}\n"
+
+        for set_obj in self.sets:
+            text += f"  {set_obj}\n"
+
+        return text

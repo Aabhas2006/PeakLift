@@ -44,30 +44,25 @@
 * Design and implement the `Exercise` class.
 * Continue building the relationship between `Workout`, `Exercise`, and `Set`.
 
-## Day 4
+## Day-05
 
-### ✅ What I Built
+### What I Learned
 
-* Implemented the `Workout` class.
-* Added support for storing multiple exercises using a list.
-* Implemented `add_exercise()` and `remove_exercise()` methods.
-* Designed and implemented the `Exercise` class.
-* Designed and implemented the `Set` class.
+* Took user input using `input()`.
+* Created `User`, `Workout`, `Exercise`, and `Set` objects dynamically from user input.
+* Connected objects using OOP composition (`User → Workout → Exercise → Set`).
+* Used loops to create multiple sets based on user input.
+* Improved my understanding of constructors and object creation.
+* Learned how `__str__()` allows objects to display themselves in a readable format.
+* Practiced debugging common Python errors like `TypeError` and `AttributeError`.
 
-### 🧠 What I Learned
+### Progress
 
-* A `Workout` contains multiple `Exercise` objects.
-* An `Exercise` contains multiple `Set` objects.
-* A `Set` stores only `weight` and `reps`.
-* Understood the difference between `remove()` and `pop()`.
-* Learned that designing classes before coding leads to cleaner architecture.
+* PeakLift is now an interactive console application instead of using hardcoded data.
+* Users can create a profile, log a workout, add an exercise, and enter sets through the terminal.
 
-### 💡 Challenges
+### Next Goal
 
-* Deciding what each class should own.
-* Understanding object relationships (Workout → Exercise → Set).
-
-### 🎯 Next Step
-
-* Connect all classes together.
-* Start implementing JSON storage for persistent workout data.
+* Allow users to add multiple exercises to a workout.
+* Improve the overall application flow.
+* Save workout data using JSON so it persists after closing the program.

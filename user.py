@@ -7,6 +7,7 @@ class User:
         self.weight = weight
         self.height = height
         self.goal = goal
+        self.workouts = []
 
     def update_weight(self, weight: float):
         
@@ -14,8 +15,26 @@ class User:
 
     def update_goal(self, goal):
 
-        self.goal = goal 
-      
+        self.goal = goal
+
+    def add_workout(self, workout):
+
+        self.workouts.append(workout)
+
+    def remove_workout(self, workout):
+
+        self.workouts.remove(workout) 
+
+    def __str__(self):
+        return (
+            f"========== User ==========\n"
+            f"Name   : {self.name}\n"
+            f"Age    : {self.age}\n"
+            f"Gender : {self.gender}\n"
+            f"Height : {self.height} cm\n"
+            f"Weight : {self.weight} kg\n"
+            f"Goal   : {self.goal}\n"
+    )
 
         
 
