@@ -15,7 +15,8 @@ class Workout:
 
     def __str__(self):
 
-        text = f"Workout Date: {self.date}\n\n"
+        text = f"========== Workout ==========\n"
+        text += f"Date : {self.date}\n\n"
 
         for exercise in self.exercises:
             text += f"{exercise}\n"

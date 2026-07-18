@@ -1,26 +1,27 @@
 from user import User
 from workout import Workout
 from exercise import Exercise
-from set import Set
+from exercise_set import Set
 
-print("=" * 34)
+
+print("=" * 40)
 print("         🏋️ PeakLift")
-print("=" * 34)
+print("=" * 40)
+
 print("\nWelcome to PeakLift!")
 print("\nLet's create your profile.\n")
 
-name = input("Enter your name :")
-age = input("Enter your age :")
-gender = input("Enter your gender :")
-height = input("Enter your height :")
-weight = input("Enter your weight :")
-goal = input("Enter your goal :")
+
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+gender = input("Enter your gender: ")
+height = input("Enter your height (cm): ")
+weight = input("Enter your weight (kg): ")
+goal = input("Enter your goal: ")
 
 user = User(name, age, gender, weight, height, goal)
 
-
 print("\n✅ Profile created successfully!\n")
-print(user)
 
 print("\nLet's log today's workout!\n")
 
@@ -28,35 +29,46 @@ workout_date = input("Enter workout date: ")
 
 workout = Workout(workout_date)
 
-print("\nWorkout Created Successfully!\n")
-print(workout)
+another_exercise = "Y"
 
-print("\n Time to add exercises.\n")
+while another_exercise == "Y":
 
-exercise_name = input("Enter the exercise name: ")
+    print("\n----------------------------")
+    print("Add New Exercise")
+    print("----------------------------")
 
-exercise =  Exercise(exercise_name)
+    exercise_name = input("Exercise Name: ")
 
-print("\nExercise created\n")
-print(exercise)
+    exercise = Exercise(exercise_name)
 
-workout.add_exercise(exercise)
+    number_of_sets = int(input("How many sets did you perform? "))
 
-print("\nExercise added to workout!\n")
+    for i in range(number_of_sets):
 
-print(workout)
+        print(f"\nSet {i + 1}")
 
-number_of_sets = int(input("How many sets did you perform? "))
+        weight = float(input("Weight (kg): "))
+        reps = int(input("Reps: "))
 
-for i in range(number_of_sets):
+        current_set = Set(reps, weight)
 
-    print(f"\nSet {i + 1}")
+        exercise.add_set(current_set)
 
-    weight = float(input("Weight (kg): "))
-    reps = int(input("Reps: "))
-    current_set = Set(reps, weight)
-    exercise.add_set(current_set)
+    workout.add_exercise(exercise)
 
-print("\nExercise Updated!\n")
-print(exercise)
+    another_exercise = input(
+        "\nDo you want to add another exercise? (Y/N): "
+    ).upper()
 
+user.add_workout(workout)
+
+ 
+print("\n" + "=" * 40)
+print("        WORKOUT SUMMARY")
+print("=" * 40)
+
+print(user)
+
+print("=" * 40)
+print(" Thank you for using PeakLift! 💪")
+print("=" * 40)

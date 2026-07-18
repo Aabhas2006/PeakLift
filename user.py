@@ -26,16 +26,22 @@ class User:
         self.workouts.remove(workout) 
 
     def __str__(self):
-        return (
+
+        text = (
             f"========== User ==========\n"
             f"Name   : {self.name}\n"
             f"Age    : {self.age}\n"
             f"Gender : {self.gender}\n"
             f"Height : {self.height} cm\n"
             f"Weight : {self.weight} kg\n"
-            f"Goal   : {self.goal}\n"
-    )
+            f"Goal   : {self.goal}\n\n"
+        )
 
-        
+        for workout in self.workouts:
+            text += f"{workout}\n"
+
+        return text
+
+        \
 
         

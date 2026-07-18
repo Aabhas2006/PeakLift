@@ -16,7 +16,7 @@ class Exercise:
 
         text = f"Exercise: {self.name}\n"
 
-        for set_obj in self.sets:
-            text += f"  {set_obj}\n"
+        for index, set_obj in enumerate(self.sets, start=1):
+            text += f"  Set {index}: {set_obj}\n"
 
         return text

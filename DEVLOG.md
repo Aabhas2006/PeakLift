@@ -66,3 +66,27 @@
 * Allow users to add multiple exercises to a workout.
 * Improve the overall application flow.
 * Save workout data using JSON so it persists after closing the program.
+
+## Day-06: Added Multiple Exercise Support
+
+### What I Learned
+
+* Learned when to use a `while` loop instead of a `for` loop.
+* Implemented a sentinel-controlled loop to allow users to add multiple exercises.
+* Improved my understanding of application flow in `main.py`.
+* Practiced organizing code into logical sections for better readability.
+* Connected multiple `Exercise` objects to a single `Workout` object.
+* Improved the overall console user experience with a cleaner workflow.
+
+### Progress
+
+* Users can now log multiple exercises within a single workout.
+* Each exercise can contain multiple sets with their own weight and reps.
+* Refactored `main.py` to make the application flow cleaner and easier to maintain.
+* PeakLift can now record a complete workout instead of being limited to a single exercise.
+
+### Next Goal
+
+* Create and manage a weekly workout plan.
+* Save user and workout data using JSON.
+* Allow users to view their workout history.
