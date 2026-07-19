@@ -90,3 +90,23 @@
 * Create and manage a weekly workout plan.
 * Save user and workout data using JSON.
 * Allow users to view their workout history.
+
+# Day-07
+
+## What I Learned
+
+* Learned object serialization using `to_dict()`.
+* Implemented JSON saving with Python's `json` module.
+* Added `to_dict()` methods to all classes.
+* Understood why only the `User` class should handle saving.
+
+## Progress
+
+* Created a `data/` folder and `user.json`.
+* Successfully saved complete workout data (User → Workout → Exercise → Set).
+* Refactored `main.py` by moving saving logic into `user.save()`.
+
+## Next Goal
+
+* Load existing user data from `user.json`.
+* Welcome returning users instead of creating a new profile every time.

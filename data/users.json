@@ -1,0 +1,49 @@
+{
+    "name": "Aabhas Sharma",
+    "age": "19",
+    "gender": "male",
+    "height": "175",
+    "weight": "54.5",
+    "goal": "To gain lean muscle",
+    "workouts": [
+        {
+            "date": "20 July 2026",
+            "exercises": [
+                {
+                    "exercise": "Incline bench press",
+                    "sets": [
+                        {
+                            "weight": 10.0,
+                            "reps": 10
+                        },
+                        {
+                            "weight": 10.0,
+                            "reps": 10
+                        },
+                        {
+                            "weight": 10.0,
+                            "reps": 10
+                        }
+                    ]
+                },
+                {
+                    "exercise": "Cable fly",
+                    "sets": [
+                        {
+                            "weight": 12.0,
+                            "reps": 10
+                        },
+                        {
+                            "weight": 12.0,
+                            "reps": 10
+                        },
+                        {
+                            "weight": 16.0,
+                            "reps": 8
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -15,3 +15,10 @@ class Set:
     def __str__(self):
 
         return f"{self.weight} kg × {self.reps} reps"
+
+    def to_dict(self):
+
+        return{
+            "weight": self.weight,
+            "reps": self.reps
+        }

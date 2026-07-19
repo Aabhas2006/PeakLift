@@ -62,6 +62,7 @@ while another_exercise == "Y":
 
 user.add_workout(workout)
 
+user.save()
  
 print("\n" + "=" * 40)
 print("        WORKOUT SUMMARY")

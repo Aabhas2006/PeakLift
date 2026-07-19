@@ -1,3 +1,4 @@
+import json
 class User:
 
     def __init__(self, name, age, gender, weight, height, goal):
@@ -42,6 +43,22 @@ class User:
 
         return text
 
-        \
+    def to_dict(self):
 
-        
+        return {
+            "name": self.name,
+            "age": self.age,
+            "gender": self.gender,
+            "height": self.height,
+            "weight": self.weight,
+            "goal": self.goal,
+            "workouts": [
+                workout.to_dict()
+                for workout in self.workouts
+            ]  
+        }
+
+    def save(self):
+
+        with open("data/users.json", "w") as file:
+            json.dump(self.to_dict(), file, indent=4)

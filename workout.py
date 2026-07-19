@@ -22,3 +22,13 @@ class Workout:
             text += f"{exercise}\n"
 
         return text
+
+    def to_dict(self):
+
+        return {
+            "date": self.date,
+            "exercises": [
+                exercise.to_dict()
+                for exercise in self.exercises
+            ]
+        }

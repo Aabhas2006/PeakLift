@@ -20,3 +20,13 @@ class Exercise:
             text += f"  Set {index}: {set_obj}\n"
 
         return text
+
+    def to_dict(self):
+
+        return {
+            "exercise": self.name,
+            "sets": [
+                current_set.to_dict()
+                for current_set in self.sets
+            ]
+        }
