@@ -132,3 +132,28 @@
 
 - Create a menu-driven interface.
 - Allow users to choose between logging a workout, viewing history, viewing their profile, or exiting the application.
+
+## Day-09
+
+### What I Learned
+
+- Learned how to build a menu-driven console application.
+- Used `if`, `elif`, and `else` to navigate between different features.
+- Improved the structure of `main.py` by organizing the application's workflow.
+- Understood how to connect existing OOP classes through a central menu system.
+
+### Progress
+
+- Added the main menu to PeakLift.
+- Implemented options to:
+  - Log a new workout.
+  - View workout history.
+  - View user profile.
+  - Exit the application.
+- Integrated the workout logging system with the new menu.
+
+### Next Goal
+
+- Keep the menu running using a `while True` loop.
+- Allow users to perform multiple actions without restarting the application.
+- Begin refactoring `main.py` into separate functions for cleaner and more maintainable code.
