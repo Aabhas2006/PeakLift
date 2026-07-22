@@ -1,3 +1,4 @@
+from exercise import Exercise
 class Workout:
 
     def __init__(self, date):
@@ -32,3 +33,18 @@ class Workout:
                 for exercise in self.exercises
             ]
         }
+
+    @classmethod
+    def from_dict(cls, data):
+
+        workout = cls(
+            data["date"]
+        )
+
+        for exercise_data in data["exercises"]:
+
+            current_exercise = Exercise.from_dict(exercise_data)
+
+            workout.add_exercise(current_exercise)
+
+        return workout

@@ -4,24 +4,29 @@ from exercise import Exercise
 from exercise_set import Set
 
 
-print("=" * 40)
-print("         🏋️ PeakLift")
-print("=" * 40)
+user = User.load()
 
-print("\nWelcome to PeakLift!")
-print("\nLet's create your profile.\n")
+if user:
 
+    print(f"\nWelcome back, {user.name}! 👋")
 
-name = input("Enter your name: ")
-age = input("Enter your age: ")
-gender = input("Enter your gender: ")
-height = input("Enter your height (cm): ")
-weight = input("Enter your weight (kg): ")
-goal = input("Enter your goal: ")
+else:
 
-user = User(name, age, gender, weight, height, goal)
+    print("\nWelcome to PeakLift!")
+    print("\nLet's create your profile.\n")
 
-print("\n✅ Profile created successfully!\n")
+    name = input("Enter your name: ")
+    age = input("Enter your age: ")
+    gender = input("Enter your gender: ")
+    height = input("Enter your height (cm): ")
+    weight = input("Enter your weight (kg): ")
+    goal = input("Enter your goal: ")
+
+    user = User(name, age, gender, weight, height, goal)
+
+    user.save()
+
+    print("\n✅ Profile created successfully!\n")
 
 print("\nLet's log today's workout!\n")
 

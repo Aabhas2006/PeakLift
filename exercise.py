@@ -1,3 +1,4 @@
+from exercise_set import Set
 class Exercise:
 
     def __init__(self, name):
@@ -30,3 +31,18 @@ class Exercise:
                 for current_set in self.sets
             ]
         }
+
+    @classmethod
+    def from_dict(cls, data):
+
+        exercise = cls(
+            data["exercise"]
+        )
+
+        for set_data in data["sets"]:
+
+            current_set = Set.from_dict(set_data)
+
+            exercise.add_set(current_set)
+
+        return exercise

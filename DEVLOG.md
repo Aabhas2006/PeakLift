@@ -110,3 +110,25 @@
 
 * Load existing user data from `user.json`.
 * Welcome returning users instead of creating a new profile every time.
+
+## Day-08
+
+### What I Learned
+
+- Learned about `@classmethod` and how it differs from instance methods.
+- Implemented `from_dict()` methods for `Set`, `Exercise`, and `Workout`.
+- Built `User.load()` to reconstruct objects from JSON data.
+- Learned how object deserialization works using nested classes.
+- Used the `os` module to check if saved data exists before loading it.
+
+### Progress
+
+- PeakLift now automatically loads existing user data.
+- Previous workouts, exercises, and sets are restored from `users.json`.
+- New workouts are added without losing old data.
+- Returning users are greeted with a personalized welcome message.
+
+### Next Goal
+
+- Create a menu-driven interface.
+- Allow users to choose between logging a workout, viewing history, viewing their profile, or exiting the application.

@@ -22,3 +22,13 @@ class Set:
             "weight": self.weight,
             "reps": self.reps
         }
+
+    @classmethod
+    def from_dict(cls, data):
+
+        current_set = cls(
+            data["weight"], 
+            data["reps"], 
+        )
+
+        return current_set
